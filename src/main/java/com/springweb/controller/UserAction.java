@@ -12,8 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.alibaba.fastjson.JSONObject;
 import com.springweb.dto.LoginLog;
 import com.springweb.dto.User;
-import com.springweb.service.LoginLogService;
-import com.springweb.service.UserService;
+import com.springweb.service.impl.LoginLogServiceImpl;
+import com.springweb.service.impl.UserServiceImpl;
 
 
 @RestController
@@ -21,9 +21,9 @@ import com.springweb.service.UserService;
 public class UserAction {
 
 	@Autowired
-    private UserService userService;
+    private UserServiceImpl userService;
 	@Autowired
-    private LoginLogService loginLogService;	
+    private LoginLogServiceImpl loginLogService;	
 	
 	//localhost:8088/springweb/user/login
 	//post参数:{name:'tom',password:123}
