@@ -16,5 +16,5 @@ https://blog.csdn.net/u014206695/article/details/61618034
 
 create tag:version0.1
 
-5.mybatis替换JdbcTemplate + Druid连接池
+5.mybatis替换JdbcTemplate + Druid连接池 + AOP实现读写分离
 https://www.cnblogs.com/lidj/p/7337535.html
