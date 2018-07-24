@@ -1,4 +1,4 @@
-开发环境：eclipse neon，jdk8，tomcat7
+开发环境：eclipse neon，jdk8，tomcat7， mysql8
 
 构建流程
 
@@ -18,3 +18,5 @@ create tag:version0.1
 
 5.mybatis替换JdbcTemplate + Druid连接池 + AOP实现读写分离
 https://www.cnblogs.com/lidj/p/7337535.html
+
+create tag:version0.2
