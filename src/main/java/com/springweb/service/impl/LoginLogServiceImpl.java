@@ -6,13 +6,15 @@ import org.springframework.stereotype.Service;
 
 import com.springweb.dao.ILoginLogDao;
 import com.springweb.dto.LoginLog;
+import com.springweb.service.ILoginLogService;
 
 
 @Service
-public class LoginLogServiceImpl {
+public class LoginLogServiceImpl implements ILoginLogService{
     @Autowired
     private ILoginLogDao logDao;
 
+    @Override
     public void insertLog(LoginLog log) {
         logDao.insertLog(log);
     }

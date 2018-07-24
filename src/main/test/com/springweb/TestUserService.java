@@ -10,13 +10,13 @@ import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 import com.springweb.dto.User;
-import com.springweb.service.UserService;
+import com.springweb.service.impl.UserServiceImpl;
 
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = { "/conf/applicationContext.xml" })
 public class TestUserService {
     @Autowired
-    private UserService userService;
+    private UserServiceImpl userService;
     
     @Test
     public void findUserByUsername(){
