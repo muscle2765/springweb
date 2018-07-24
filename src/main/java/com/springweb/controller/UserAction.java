@@ -45,12 +45,31 @@ public class UserAction {
     	}
     }
     
+    //localhost:8088/springweb/user/register
+  	//post参数:{name:'tom',password:123}
+      @ResponseBody
+      @RequestMapping(value="/register",method = RequestMethod.POST,
+              produces = "application/json;charset=UTF-8")
+      public String register(@RequestBody String json) {
+      	User user = JSONObject.parseObject(json, User.class);
+      	int count = userService.validate(user);
+      	if(count > 0){
+      		return "用户已存在";
+      	}else{
+      		userService.addUser(user);
+      		return "注册成功";
+      	}
+      }
+    
     //http://localhost:8088/springweb/user/getInfo?name=张三
     @ResponseBody
     @RequestMapping(value="/getInfo",method = RequestMethod.GET,
     	produces = "application/json;charset=UTF-8")
     public String getInfo(String name) {
     	User user = userService.findUserByUsername(name);
+    	if(user == null){
+    		return "用户不存在";
+    	}
         return JSONObject.toJSONString(user);
     }
     
