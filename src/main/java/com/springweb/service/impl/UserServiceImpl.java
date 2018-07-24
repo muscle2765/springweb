@@ -1,4 +1,4 @@
-package com.springweb.service;
+package com.springweb.service.impl;
 
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +9,7 @@ import com.springweb.dto.User;
 
 
 @Service
-public class UserService {
+public class UserServiceImpl {
     @Autowired
     private IUserDao userdao;
     
