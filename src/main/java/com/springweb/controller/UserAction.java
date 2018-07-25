@@ -66,6 +66,7 @@ public class UserAction {
     @RequestMapping(value="/getInfo",method = RequestMethod.GET,
     	produces = "application/json;charset=UTF-8")
     public String getInfo(String name) {
+    	System.out.println(userService.getNameById(2));
     	User user = userService.findUserByUsername(name);
     	if(user == null){
     		return "用户不存在";

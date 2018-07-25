@@ -21,6 +21,7 @@
         <property name="locations">
             <list>
                 <value>classpath:conf/mysqldb.properties</value>
+                <value>classpath:conf/redis.properties</value>
             </list>
         </property>
     </bean>

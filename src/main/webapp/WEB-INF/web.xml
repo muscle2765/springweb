@@ -11,6 +11,7 @@
             <param-name>contextConfigLocation</param-name>
             <!-- <param-value>classpath:/configs/spring-*.xml</param-value> --><!--  -->
             <param-value>classpath:conf/mybatis-spring.xml,
+            			classpath:conf/redis-spring.xml,
                          classpath:conf/applicationContext.xml</param-value>
          </context-param>
          <!-- Spring监听 -->

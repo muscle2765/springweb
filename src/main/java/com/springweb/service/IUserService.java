@@ -13,4 +13,7 @@ public interface IUserService {
 
     @DataSource("master")
     public void addUser(User user);
+
+    @DataSource("slave")
+	public String getNameById(int id);
 }

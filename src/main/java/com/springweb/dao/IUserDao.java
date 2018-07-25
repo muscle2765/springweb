@@ -11,4 +11,6 @@ public interface IUserDao {
 	public void addUser(User user);
 	
 	public int validate(User user);
+
+	public String getNameById(int id);
 }
