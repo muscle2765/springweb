@@ -69,10 +69,10 @@
 	
 	<!-- 为业务逻辑层的方法解析@DataSource注解  为当前线程的HandleDataSource注入数据源 -->   
     <bean id="dataSourceAspect" class="com.springweb.util.datasource.DataSourceAspect" />    
-    <aop:config proxy-target-class="true">    
-        <aop:aspect id="dataSourceAspect" ref="dataSourceAspect" order="2">    
+    <aop:config proxy-target-class="true">
+        <aop:aspect id="dataSourceAspect" ref="dataSourceAspect" order="2">
             <aop:pointcut id="tx" expression="execution(* com.springweb.service.impl.*.*(..)) "/>    
-            <aop:before pointcut-ref="tx" method="before" />                
-        </aop:aspect>    
+            <aop:before pointcut-ref="tx" method="before" />
+        </aop:aspect>
     </aop:config>
 </beans>
